@@ -2,7 +2,7 @@
 print("Hello User")
 
 # Take in User Input
-x = input("Please inpuit")
+x = input("Please input")
 
 # Respond Back with User Input
 

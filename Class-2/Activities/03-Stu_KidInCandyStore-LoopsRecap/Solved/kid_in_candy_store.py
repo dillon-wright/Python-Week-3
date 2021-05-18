@@ -8,3 +8,11 @@ allowance = 5
 candy_cart = []
 
 # Print out options
+
+X = int(input("How many Candys you want bro?"))
+A = 0
+while A < X:
+    if A > allowance:
+        break
+    print(candy_list[A])
+    A += 1
