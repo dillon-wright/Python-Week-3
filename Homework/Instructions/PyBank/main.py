@@ -17,12 +17,10 @@ largest_i_date = ''
 date_list = []
 Head_0 = ''
 
-# Open the CSV File and iterate through all rows
+# Open the CSV File and iterate through all rows and also store the header in head0
 with open(csvpath, 'r') as csvfile:
     csvreader = csv.reader(csvfile, delimiter=',')
-
-    next(csvreader, None)
-
+    head_0 = next(csvreader, None)
     for row in csvreader:
         sum_total = sum_total + int(row[1])
         mean_list.append(int(row[1]))
@@ -53,7 +51,6 @@ print('Total: $' + str(sum_total))
 print('Average  Change: $' + str(round(np.mean(change_list), 2)))
 print('Greatest Increase in Profits: ' + largest_i_date + ' ($' + str(largest_increase) + ')')
 print('Greatest Decrease in Profits: ' + largest_l_date + ' ($' + str(largest_loss) + ')')
-
 # Print to file
 
 Analysis_File = open('S:/Bootcamp/Python-Week-3/Homework/Instructions/PyBank/Analysis/Analysis_File.txt', 'w')
